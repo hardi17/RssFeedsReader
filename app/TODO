@@ -1,0 +1,23 @@
+--------------------
+-------------------
+News Feed application:
+--------------------
+-------------------
+
+Things to do:
+------------------------------
+(1) Jetpack comopose
+(2) More unit test
+(3) Manage data in offline using RoomDatabase
+(4) Add animation while scrolling news list
+
+Things that are done:
+----------------------
+The list of the data from the feed where each element contains:
+ Title
+ Description
+ Link to the news article, which opens in a browser when clicked on
+ The image from the article
+
+using,
+[ Kotlin, MVVM, Retrofit, Coroutines, Flow api, Hilt, Unit test]
