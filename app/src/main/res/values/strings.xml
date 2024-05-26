@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SkyNews</string>
+
+    <!--Error message-->
+    <string name="retry">Retry</string>
+    <string name="no_description">Description: Click on the news image to read more about this story and description.</string>
 </resources>
