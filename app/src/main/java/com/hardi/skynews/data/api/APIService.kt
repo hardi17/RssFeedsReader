@@ -7,6 +7,6 @@ import javax.inject.Singleton
 @Singleton
 interface APIService {
 
-    @GET("world.xml")
+    @GET("world/rss.xml")
     suspend fun getHomeFeed(): RssFeed
 }

@@ -21,7 +21,7 @@ class ApplicationModule {
     @BaseUrl
     @Provides
     fun provideBaseUrl(): String =
-        "http://feeds.skynews.com/feeds/rss/"
+        "https://feeds.bbci.co.uk/news/"
 
     @Provides
     @Singleton

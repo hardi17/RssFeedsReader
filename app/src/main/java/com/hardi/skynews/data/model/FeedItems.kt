@@ -1,8 +1,7 @@
 package com.hardi.skynews.data.model
 
 import org.simpleframework.xml.Element
-import org.simpleframework.xml.ElementArray
-import org.simpleframework.xml.Path
+import org.simpleframework.xml.Namespace
 import org.simpleframework.xml.Root
 
 @Root(name = "item", strict = false)
@@ -15,13 +14,12 @@ data class FeedItems @JvmOverloads constructor(
     @param:Element(name = "link")
     var link: String? = null,
 
-    @field:ElementArray(name = "description", required = false)
-    @param:ElementArray(name = "description", required = false)
-    @field:Path("item/description")
-    @param:Path("item/description")
+    @field:Element(name = "description")
+    @param:Element(name = "description")
     var description: String? = null,
 
-    @field:Element(name = "enclosure", required = false)
-    @param:Element(name = "enclosure", required = false)
-    var enclosure: Enclosure? = null
+    @field:Element(name = "thumbnail", required = false)
+    @param:Element(name = "thumbnail", required = false)
+    @Namespace(prefix = "media")
+    var thumbnail: Thumbnail? = null
 )

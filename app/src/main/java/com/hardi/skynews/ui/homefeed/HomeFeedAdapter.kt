@@ -13,7 +13,7 @@ import com.hardi.skynews.databinding.NewsItemLayoutBinding
 
 class HomeFeedAdapter(
     private val newsList: ArrayList<FeedItems>
-) :RecyclerView.Adapter<HomeFeedAdapter.DataViewHolder>() {
+) : RecyclerView.Adapter<HomeFeedAdapter.DataViewHolder>() {
 
     class DataViewHolder(private val binding: NewsItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -23,15 +23,12 @@ class HomeFeedAdapter(
 
             //Display news article description
             //if it's null/failing fetching from XML response then default msg shown
-            if (!items.description.isNullOrEmpty()) {
-                binding.newsDescription.text = items.description
-            } else {
-                binding.newsDescription.text = itemView.context.getString(R.string.no_description)
-            }
+            val descValue = items.description ?: itemView.context.getString(R.string.no_description)
+            binding.newsDescription.text = descValue
 
             //Display news article image
             Glide.with(binding.newsImage.context)
-                .load(items.enclosure?.url)
+                .load(items.thumbnail?.url)
                 .error(R.drawable.ic_launcher_background)
                 .into(binding.newsImage)
 
