@@ -17,9 +17,9 @@
 - XMl converter : SimpleXml 
 - XML, viewbinding and refresh layout
 
-## Contributing to create small app for fetching XML response using SimpleXml converter in kotlin
+## Usage
+- fetching XML response using SimpleXml converter in kotlin
 
-Just make pull request. You are in!
 
 Thanks
 
